@@ -33,7 +33,6 @@ export async function getStaticProps({ params: { id } }) {
 function ProductPage({ product }) {
   const user = useUser();
 
-  console.log('[ProductPage] render:', product);
   return (
     <Page title={product.title}>
       <div className="flex flex-col lg:flex-row">

@@ -3,7 +3,6 @@ import ProductCard from '../components/ProductCard';
 import { getProducts } from '../lib/products';
 
 export async function getStaticProps() {
-  console.log('[HomePage] getStaticProps()');
   const products = await getProducts();
   return {
     props: { products },
@@ -12,7 +11,6 @@ export async function getStaticProps() {
 }
 
 function HomePage({ products }) {
-  console.log('[HomePage] render:', products);
   return (
     <Page title="Indoor Plants">
       <ul className="grid grid-cols-1 lg:grid-cols-3 gap-4">
